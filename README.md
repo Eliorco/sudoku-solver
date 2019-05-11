@@ -9,7 +9,7 @@ simple, by adding an array full of cubes with their coordinats which means (<COL
 screenshots:
 
 this:
-      0  |  1  |  2  ||  3  |  4  |  5  ||  6  |  7  |  8  |
+```      0  |  1  |  2  ||  3  |  4  |  5  ||  6  |  7  |  8  |
    |-------------------------------------------------------|
 0  |  4  |     |     ||     |  1  |  9  ||     |  8  |     |
    |-----------------||-----------------||-----------------|
@@ -54,3 +54,4 @@ turn into this:
 
 No empty cubes
 Game Over!!!, we won!
+```
