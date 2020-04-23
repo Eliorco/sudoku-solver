@@ -1,3 +1,8 @@
 *.txt
 __pycache__
 venv
+*.log
+logs/
+solver*/
+*.idea
+*.xml

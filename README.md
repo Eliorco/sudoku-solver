@@ -1,10 +1,13 @@
 # sudoku-solver
-if you try really hard and trying to solve a level expert sudoku and finally give up? this is the right repo for you!
+If you tried really hard to solve expert level sudoku and eventually give up? this is the right repo for you!
 
-all you need to do is insert numbers to their specific cubes, how do we do it?
-simple, by adding an array full of cubes with their coordinats which means (<COLUMN>, <ROW>, <NUMBER>)
+All you need to do is to create Cube array with their col,row,number('<COLUMN>', '<ROW>', '<NUMBER>')
 
-```my_grid = [...Cube(0,4,8), Cube(1,4,5), Cube(2,4,7), Cube(3,4,9), Cube(4,4,2), Cube(5,4,4), Cube(6,4,3)...]```
+Most Top-Left cube is: 0,0
+
+Most Bottom-Right cube is: 9,9
+
+```my_grid = [Cube(0,0,4), Cube(4,0,1), Cube(5,0,9),...., Cube(1,3,3), Cube(7,3,5), Cube(8,3,6),...]```
 
 screenshots:
 
