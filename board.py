@@ -7,6 +7,7 @@ class Board:
     def __init__(self, size):
         self.size = size
         self.grid = [[Cube(y, x) for x in range(size)] for y in range(size)]
+        self.empty_cube_list = None
 
     def get_row(self, row_num):
         row = []
@@ -44,7 +45,7 @@ class Board:
         cubic_numbers = self.t__get_cubic_numbers(cube)
         return list(set(list(row_numbers + col_numbers + cubic_numbers)))
 
-    def draw_board(self):
+    def draw_board(self): # TODO: refactor print by O(n) and also use asyncio for building formatted strings
         first_line = """      0  |  1  |  2  ||  3  |  4  |  5  ||  6  |  7  |  8  |\n   |-------------------------------------------------------|\n"""
         some_dict = {}
         template = ''
