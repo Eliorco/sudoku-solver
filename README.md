@@ -8,7 +8,9 @@ Most Top-Left cube is: 0,0
 Most Bottom-Right cube is: 9,9
 
 ```my_grid = [Cube(0,0,4), Cube(4,0,1), Cube(5,0,9),...., Cube(1,3,3), Cube(7,3,5), Cube(8,3,6),...]```
-
+<br><H2>Coming Soon</H2>
+<p>Web User Interface to easly insert sudoku board, beta is here.</p>
+<hr>
 screenshots:
 
 this:

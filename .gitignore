@@ -4,5 +4,5 @@ venv
 *.log
 logs/
 solver*/
-*.idea
+.idea
 *.xml
