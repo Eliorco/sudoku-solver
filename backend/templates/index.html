@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<h2>Insert your sudoku board:</h2>
+<h1>{{ 'Insert your sudoku board:' if not solved else 'The Solution is:'}} </h1>
 <br>
 <hr><br>
 <style>
@@ -54,37 +54,40 @@ input {
       }));
   }
 </script>
+<div class="container-fluid">
     {% if solved and solved == True %}
     <div class="alert alert-success" role="alert">SOLVED</div>
     {% endif %}
-<div class="row">
-    <form action="/start" method="post">
-        <div class="col-8">
-            <table>
-                {% for i in range(9) %}
-                <tr id="{{ i+1 }}">
-                    {% for j in range(9) %}
-                    {% if solved %}
-                    <td id="{{ i+1,j+1 }}" onkeyup="reply_click(this.id, this.children[0].value)"><input id="{{ i+1,j+1 }}" placeholder="{{ cells[j][i].number }}"></td>
-                    {% else %}
-                    <td id="{{ i+1,j+1 }}" onkeyup="reply_click(this.id, this.children[0].value)"><input id="{{ i+1,j+1 }}" placeholder="{{ i+1,j+1 }}"></td>
-                    {% endif %}
+    <div class="row">
+        <form action="/start" method="post">
+            <div class="col-8">
+                <table>
+                    {% for i in range(9) %}
+                    <tr id="{{ i+1 }}">
+                        {% for j in range(9) %}
+                        {% if solved %}
+                        <td id="{{ i+1,j+1 }}" onkeyup="reply_click(this.id, this.children[0].value)" style="background-color:#e6ffe6">{{ cells[j][i].number }}</td>
+                        {% else %}
+                        <td id="{{ i+1,j+1 }}" onkeyup="reply_click(this.id, this.children[0].value)"><input id="{{ i+1,j+1 }}" placeholder="{{ i+1,j+1 }}"></td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
                     {% endfor %}
-                </tr>
-                {% endfor %}
-                <tr>
-            </table>
-        </div>
-                <input class="btn" type="submit">
-
-        <div class="col-2">
-            <div class="row">
-                <br>
+                    <tr>
+                </table>
             </div>
-            <div class="row">
-                <a href="/reset">Reset</a>
-            </div>
+    <div class="row">
+        <div class="col-sm">
+            <button type="submit" class="btn btn-primary btn-lg">Solve it!</button>
         </div>
+        <div class="col-sm">
+            <a class="btn btn-secondary btn-lg" href="/reset">Reset</a>
+        </div>
+        <div class="col-sm">
+            <a class="btn btn-success btn-lg" href="/fixed_level">Expert Level Run</a>
+        </div>
+    </div>
     </form>
+    </div>
 </div>
 {% endblock %}
