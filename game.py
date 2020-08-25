@@ -70,6 +70,7 @@ class Game:
                      Cube(0, 7, 2), Cube(8, 7, 4),
                      Cube(1, 8, 4), Cube(3, 8, 6), Cube(5, 8, 7)]
 
+
     def __init__(self, board):
         self.board = board
         LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s"
