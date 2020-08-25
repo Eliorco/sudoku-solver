@@ -7,8 +7,9 @@
 {% block content %}
 <h1>{{ 'Insert your sudoku board:' if not solved else 'The Solution is:'}} </h1>
 <hr>
+
 <style>
- table {
+table {
   margin:1em auto;
 }
 td {
@@ -35,9 +36,8 @@ input {
   border:1px solid;
   text-align:center;
 }
-
-
 </style>
+
 <script type="text/javascript">
   function reply_click(clicked_id, input)
   {
