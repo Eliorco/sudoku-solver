@@ -2,12 +2,13 @@ import webbrowser
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 from time import sleep
 from game import Game, Board, Cube
+from secrets import flask_secret_key
 import json
 
 #server setup
 app = Flask(__name__)
 app.config.from_object(__name__)
-app.secret_key = "$2b$12$O6de.w1FB5HTnee8Ak9WLusDlGoouoVT5CAQGGEwTMfD6nUI/BUiC"
+app.secret_key = flask_secret_key
 cube_list = [] # TODO refactor it to a better solution user input
 
 def reset_input():
