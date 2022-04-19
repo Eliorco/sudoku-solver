@@ -42,9 +42,9 @@ def play(board: Board):
 @timing
 def main():
     # b = Board(size=9, level=sudoku1_false) #### # not a valid board
-    b = Board(size=9, level=sudoku1_6)
+    # b = Board(size=9, level=sudoku1_6)
     # b = Board(size=9, level=sudokuMaster) #### # not a valid board
-    # b = Board(size=9, level=sudoku4expert)
+    b = Board(size=9, level=sudoku4expert)
     # b = Board(size=9, level=sudoku4expert_new2)
 
     try:
